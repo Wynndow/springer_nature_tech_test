@@ -36,5 +36,15 @@ describe Canvas do
         "------------\n"
       )
     end
+
+    it 'displays an error if invalid arguments are passed' do
+      message = "Invalid arguments"
+      expect{ canvas.line(1,2,6,3) }.to raise_error message
+    end
+
+    it 'displays an error if invalid arguments are passed' do
+      message = "Invalid arguments"
+      expect{ canvas.line(1,1000,6,1000) }.to raise_error message
+    end
   end
 end
