@@ -1,6 +1,6 @@
 # Maker's Day
 
-A repository of work from the inaugral London workshop with people from Maker's Academy.
+A repository of work from the inaugral London workshop with people from [Makers Academy](http://makersacademy.com/).
 
 * Please add your work in a subdirectory.
 * Every time you push a merge commit a kitten will die.
