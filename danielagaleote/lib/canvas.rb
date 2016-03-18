@@ -1,15 +1,11 @@
 class Canvas
 
-  def intilialise
+  attr_accessor :currentstate
+  attr_reader :width, :height
 
-  end
-
-  def userinput(input)
-    components = input.split(' ')
-    command = components[0]
-    width = components[1].to_i
-    height = components[2].to_i
-    drawcanvas(width, height)
+  def initialize(width,height)
+    @width = width
+    @height = height
   end
 
   def drawhorizontalborder(width)
@@ -28,12 +24,26 @@ class Canvas
     return result + "|"
   end
 
-  def drawcanvas(width, height)
-    result=""
-    result+=drawhorizontalborder(width)+"\n"
+  def self.drawhorizontalline(x1, x2)
+    drawcanvas
+  end
+
+  def self.drawcanvas
+    result = ""
+    result += drawhorizontalborder(@width)+"\n"
+    @height.times{result+=drawcontainingline(@width)+"\n"}
+    result += drawhorizontalborder(@width)+"\n"
+    @currentstate = result
+
+  end
+
+  def drawcanvas
+    result = ""
+    result += drawhorizontalborder(width)+"\n"
     height.times{result+=drawcontainingline(width)+"\n"}
-    result+=drawhorizontalborder(width)+"\n"
-    return result
+    result += drawhorizontalborder(width)+"\n"
+    @currentstate = result
+
   end
 
 end
