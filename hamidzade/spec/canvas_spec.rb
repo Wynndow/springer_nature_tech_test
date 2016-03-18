@@ -35,6 +35,15 @@ describe Canvas do
                                       ['x', 'x', 'x']
                                   ]
     end
+
+    it 'can draw a vertical line' do
+      canvas.line(2, 0, 2, 2)
+      expect(canvas.canvas).to eq [
+                                      [' ', ' ', 'x'],
+                                      [' ', ' ', 'x'],
+                                      [' ', ' ', 'x']
+                                  ]
+    end
   end
 end
 

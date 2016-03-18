@@ -13,5 +13,9 @@ class Canvas
     if y1 == y2
       (x1..x2).each{ |x_value| draw(x_value, y1) }
     end
+
+    if x1 == x2
+      (y1..y2).each{ |y_value| draw(x1, y_value) }
+    end
   end
 end
