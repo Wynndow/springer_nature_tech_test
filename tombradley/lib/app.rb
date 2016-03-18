@@ -1,8 +1,12 @@
 class Draw
 
   def execute_command(command)
-    output_str = ''
-    command.split
+    width, height = command.split[1..2].map(&:to_i)
+    output = ''
+    topbottom = (1..(width + 2)).map { '-' }.join + "\n"
+    output += topbottom
+    height.times { output += '|' + (1..width).map { ' ' }.join + '|' + "\n" }
+    output += topbottom
   end
 end
 
