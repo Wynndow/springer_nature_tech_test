@@ -25,7 +25,7 @@ describe Canvas do
   end
 
   describe '#line' do
-    it 'displays a line on the canvas' do
+    it 'displays a horizontal line on the canvas' do
       canvas.line(1,2,6,2)
       expect(canvas.display).to eq(
         "------------\n" +
