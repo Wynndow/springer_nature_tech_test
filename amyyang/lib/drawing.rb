@@ -1,3 +1,5 @@
+require 'canvas'
+
 class Drawing
 
   def parse(txt_command)
@@ -6,26 +8,18 @@ class Drawing
 
   def command(txt_command)
     parameter = parse(txt_command)
-    width = parameter[1].to_i
-    height = parameter[2].to_i
+    draw_command = parameter[0]
 
-    first_line = ""
-    (1..(width + 2)).each do
-      first_line = first_line + "-"
+    case draw_command
+    when "C"
+      width = parameter[1].to_i
+      height = parameter[2].to_i
+      canvas = Canvas.new(width, height)
+      canvas.content
+    when "L"
+      canvas.draw_line
+    else
+      raise "Invalid command"
     end
-    first_line += "\n"
-
-    height_lines = ""
-    (1..height).each do
-      bar = "|"
-      (1..width).each do
-        bar = bar + ' '
-      end
-      bar = bar + "|"
-      height_lines += bar + "\n"
-    end
-
-    first_line + height_lines + first_line
   end
-
 end
