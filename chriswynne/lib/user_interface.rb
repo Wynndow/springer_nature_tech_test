@@ -1,9 +1,7 @@
 class UserInterface
 
-  def initialize
+  def get_command
     print "enter command: "
   end
 
 end
-
-UserInterface.new
