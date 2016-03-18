@@ -34,7 +34,6 @@ class Canvas
     @height.times{result+=drawcontainingline(@width)+"\n"}
     result += drawhorizontalborder(@width)+"\n"
     @currentstate = result
-
   end
 
   def drawcanvas
@@ -43,7 +42,6 @@ class Canvas
     height.times{result+=drawcontainingline(width)+"\n"}
     result += drawhorizontalborder(width)+"\n"
     @currentstate = result
-
   end
 
 end

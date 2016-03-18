@@ -1,4 +1,4 @@
-require 'canvas'
+require_relative 'canvas'
 
 class Command
 
