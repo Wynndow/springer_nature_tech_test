@@ -37,10 +37,3 @@ class Canvas
   end
 
 end
-
-//missing iteration over get and testing structure
-
-puts "enter command"
-command = gets
-canvas = Canvas.new
-puts canvas.userinput(command)
