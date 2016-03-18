@@ -16,4 +16,15 @@ describe Canvas do
       expect(canvas.canvas).to eq blank_canvas2x3
     end
   end
+
+  describe '#draw' do
+    it 'can draw a ' do
+      canvas.draw(2, 0)
+      expect(canvas.canvas).to eq [
+    [' ', ' '],
+    [' ', ' '],
+    ['x', ' ']
+]
+    end
+  end
 end
