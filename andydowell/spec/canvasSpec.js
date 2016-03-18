@@ -25,4 +25,16 @@ describe('canvas', function() {
       expect(canvas.content[3][2]).toEqual('x');
     })
   })
+
+  describe('drawLine', function() {
+    it('should be able to draw a horizontal line between two points', function() {
+      var canvas = new Canvas(5,5);
+      canvas.generateCanvas();
+      canvas.drawLine(0,0,4,0);
+      expect(canvas.content[0][0]).toEqual('x');
+      expect(canvas.content[0][1]).toEqual('x');
+      expect(canvas.content[0][2]).toEqual('x');
+      expect(canvas.content[0][3]).toEqual('x');
+    })
+  })
 })
