@@ -2,8 +2,6 @@ require 'canvas.rb'
 
 describe Canvas do
   
-
-
   it "prints a canvas of 2 by 2" do
     canvas = Canvas.new(2,2)
     expect(canvas.print).to eq(
