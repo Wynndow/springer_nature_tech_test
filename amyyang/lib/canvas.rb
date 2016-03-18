@@ -8,12 +8,18 @@ class Canvas
   end
 
   def content
+     horizon_border + body_lines + horizon_border
+  end
+
+  def horizon_border
     first_line = ""
     (1..(width + 2)).each do
-      first_line = first_line + "-"
+      first_line += "-"
     end
     first_line += "\n"
+  end
 
+  def body_lines
     height_lines = ""
     (1..height).each do
       bar = "|"
@@ -23,7 +29,9 @@ class Canvas
       bar = bar + "|"
       height_lines += bar + "\n"
     end
-
-    first_line + height_lines + first_line
+    height_lines
   end
+  #
+  # def draw_line
+  # end
 end

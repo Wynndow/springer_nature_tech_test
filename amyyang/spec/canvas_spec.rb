@@ -8,6 +8,4 @@ describe Canvas do
     expect(canvas.height).to eq(6)
   end
 
-
-
 end

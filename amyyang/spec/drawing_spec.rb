@@ -23,4 +23,12 @@ describe Drawing do
     expect(subject.parse("C 2 3")).to eq(["C","2","3"])
   end
 
+  it "raiese an error with an invalid command" do
+    expect{subject.command("A")}.to raise_error("Invalid command")
+  end
+
+  xit "has a list of drawing commands" do
+    expect(subject.command("L")).to eq("xxx")
+  end
+
 end
