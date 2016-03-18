@@ -15,4 +15,8 @@ Canvas.prototype.generateCanvas = function() {
   this.content = result;
 }
 
+Canvas.prototype.drawPoint = function(x, y) {
+  this.content[y][x] = 'x';
+}
+
 module.exports = Canvas;

@@ -16,4 +16,13 @@ describe('canvas', function() {
       expect(canvas.content[1][1]).toEqual(' ');
     })
   })
+
+  describe('drawPoint', function() {
+    it('should be able to draw a point', function() {
+      var canvas = new Canvas(5,5);
+      canvas.generateCanvas();
+      canvas.drawPoint(2,3);
+      expect(canvas.content[3][2]).toEqual('x');
+    })
+  })
 })
