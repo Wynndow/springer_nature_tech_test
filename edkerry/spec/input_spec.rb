@@ -1,5 +1,3 @@
-require 'input'
-
 describe Input do
 
   describe'#initialization' do

@@ -1,5 +1,3 @@
-require 'canvas'
-
 describe Canvas do
 
   let(:canvas) {described_class.new(4,4)}
