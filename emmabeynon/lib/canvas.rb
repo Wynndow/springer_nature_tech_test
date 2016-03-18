@@ -21,6 +21,8 @@ class Canvas
   end
 
   def line(x1, y1, x2, y2)
+    raise 'Invalid arguments' if x1 > width || x2 > width || y1 > height ||
+      y2 > height
     if y1 == y2
       for i in x1..x2 do
         contents[y1-1][i-1] = 'x'
