@@ -27,8 +27,14 @@ describe Drawing do
     expect{subject.command("A")}.to raise_error("Invalid command")
   end
 
-  xit "has a list of drawing commands" do
-    expect(subject.command("L")).to eq("xxx")
+  it "takes a command and creates a line" do
+    subject.command("C 2 3")
+    expect(subject.command("L 1 2 2 2")).to eq(
+    "----\n" +
+    "|  |\n" +
+    "|xx|\n" +
+    "|  |\n" +
+    "----\n")
   end
 
 end

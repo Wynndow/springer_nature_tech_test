@@ -17,6 +17,7 @@ class Drawing
       canvas = Canvas.new(width, height)
       canvas.content
     when "L"
+      canvas = Canvas.new(width, height)
       canvas.draw_line
     else
       raise "Invalid command"
