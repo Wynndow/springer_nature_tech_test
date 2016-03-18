@@ -25,6 +25,10 @@ class Canvas
       for i in x1..x2 do
         contents[y1-1][i-1] = 'x'
       end
+    elsif x1 == x2
+      for i in y1..y2 do
+        contents[i-1][x1-1] = 'x'
+      end
     else
       raise 'Invalid arguments'
     end

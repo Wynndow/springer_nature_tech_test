@@ -25,4 +25,16 @@ describe 'Canvas' do
       "------------\n"
     )
   end
+
+  it 'creates a line' do
+    canvas.line(1,1,1,4)
+    expect(canvas.display).to eq(
+      "------------\n" +
+      "|x         |\n" +
+      "|x         |\n" +
+      "|x         |\n" +
+      "|x         |\n" +
+      "------------\n"
+    )
+  end
 end
