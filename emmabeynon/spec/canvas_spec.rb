@@ -23,4 +23,18 @@ describe Canvas do
       )
     end
   end
+
+  describe '#line' do
+    it 'displays a line on the canvas' do
+      canvas.line(1,2,6,2)
+      expect(canvas.display).to eq(
+        "------------\n" +
+        "|          |\n" +
+        "|xxxxxx    |\n" +
+        "|          |\n" +
+        "|          |\n" +
+        "------------\n"
+      )
+    end
+  end
 end
