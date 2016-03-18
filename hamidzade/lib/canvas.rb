@@ -6,6 +6,12 @@ class Canvas
   end
 
   def draw(x, y)
-    canvas[x][y] = 'x'
+    canvas[y][x] = 'x'
+  end
+
+  def line(x1, y1, x2, y2)
+    if y1 == y2
+      (x1..x2).each{ |x_value| draw(x_value, y1) }
+    end
   end
 end
