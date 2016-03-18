@@ -1,10 +1,12 @@
 require 'canvas.rb'
 
 describe Canvas do
-  subject(:canvas){described_class.new}
   
+
+
   it "prints a canvas of 2 by 2" do
-    expect(canvas.print(2,2)).to eq(
+    canvas = Canvas.new(2,2)
+    expect(canvas.print).to eq(
       "----\n"+
       "|  |\n"+
       "|  |\n"+
@@ -12,7 +14,8 @@ describe Canvas do
   end
 
   it "prints a canvas of 4 by 4" do
-    expect(canvas.print(4,4)).to eq(
+    canvas = Canvas.new(4,4)
+    expect(canvas.print).to eq(
       "------\n"+
       "|    |\n"+
       "|    |\n"+
