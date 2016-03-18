@@ -30,9 +30,9 @@ class Canvas
 
   def drawcanvas(width, height)
     result=""
-    result+=drawhorizontalborder(width)
-    height.times{result+=drawcontainingline(width)}
-    result+=drawhorizontalborder(width)
+    result+=drawhorizontalborder(width)+"\n"
+    height.times{result+=drawcontainingline(width)+"\n"}
+    result+=drawhorizontalborder(width)+"\n"
     return result
   end
 
