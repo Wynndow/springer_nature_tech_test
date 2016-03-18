@@ -21,4 +21,8 @@ describe Commander do
       "----")
   end
 
+  it "take user's input and calls canvas" do
+    commander = Commander.new
+    expect(commander.execute("X 2 3")).to eq("Invalid command")
+  end
 end
