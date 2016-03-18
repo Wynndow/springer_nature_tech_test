@@ -34,4 +34,20 @@ Canvas.prototype.drawLine = function(x1, y1, x2, y2) {
   }
 }
 
+Canvas.prototype.renderCanvas = function() {
+  var result = '';
+  var upperBorder = new Array(this.width+3).join('-') + '\n';
+  result += upperBorder;
+  for(var row = 0; row < this.height; row++) {
+    var rowString = '|';
+    for(var col = 0; col < this.width; col++) {
+      rowString += this.content[row][col];
+    }
+    rowString += '|\n';
+    result += rowString;
+  }
+  result += upperBorder;
+  return result
+}
+
 module.exports = Canvas;
