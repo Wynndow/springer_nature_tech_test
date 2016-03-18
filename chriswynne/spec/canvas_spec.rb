@@ -18,6 +18,19 @@ describe Canvas do
     expect(new_canvas.width).to eq(width)
   end
 
+  describe '#draw' do
+
+    it 'can return the canvas as a string' do
+      new_canvas = canvas.new(1,1)
+      expect(new_canvas.draw).to eq(
+      "---\n" +
+      "| |\n" +
+      "---\n"
+      )
+    end
+
+  end
+
 
 
 
