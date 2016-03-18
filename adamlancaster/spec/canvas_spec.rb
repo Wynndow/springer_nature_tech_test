@@ -22,5 +22,26 @@ describe Canvas do
       "------")
   end
 
+  describe("printing lines") do
+ 
+    it "Prints a straight line given the start and end point" do
+      canvas = Canvas.new(2,2)
+      expect(canvas.print_line(0, 0, 0, 1)).to eq(
+        "----\n"+
+        "|xx|\n"+
+        "|  |\n"+
+        "----")
+    end
+
+    it "Prints a straight line given the start and end point" do
+      canvas = Canvas.new(2,2)
+      expect(canvas.print_line(1, 0, 1, 1)).to eq(
+        "----\n"+
+        "|  |\n"+
+        "|xx|\n"+
+        "----")
+    end
+  
+  end
 
 end
