@@ -45,6 +45,17 @@ describe Canvas do
                                   ]
     end
   end
+
+  describe '#rectangle' do
+    it 'can draw a rectangle' do
+      canvas.rectangle(0, 0, 2, 2)
+      expect(canvas.canvas).to eq [
+                                      ['x', 'x', 'x'],
+                                      ['x', ' ', 'x'],
+                                      ['x', 'x', 'x']
+                                  ]
+    end
+  end
 end
 
 
