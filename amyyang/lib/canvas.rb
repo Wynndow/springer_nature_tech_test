@@ -31,7 +31,7 @@ class Canvas
     end
     height_lines
   end
-  #
-  # def draw_line
-  # end
+
+  def draw_line
+  end
 end
