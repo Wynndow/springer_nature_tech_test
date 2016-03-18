@@ -8,7 +8,7 @@ class Canvas
     components = input.split(' ')
     command = components[0]
     width = components[1].to_i
-    height = components[2]
+    height = components[2].to_i
     drawcanvas(width, height)
   end
 
@@ -28,11 +28,10 @@ class Canvas
     return result + "|"
   end
 
-
   def drawcanvas(width, height)
     result=""
     result+=drawhorizontalborder(width)
-    result+=drawcontainingline(width)
+    height.times{result+=drawcontainingline(width)}
     result+=drawhorizontalborder(width)
     return result
   end
