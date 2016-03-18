@@ -17,7 +17,7 @@ class Canvas
       ("|" + row.join("") + "|\n")
     end
     body = bodyRows.join("")
-    horizontal + body + horizontal
+    puts horizontal + body + horizontal
   end
 
   def line(x1, y1, x2, y2)
