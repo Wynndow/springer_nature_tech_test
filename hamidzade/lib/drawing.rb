@@ -1,5 +1,5 @@
 class Drawing
   def canvas(w, h)
-    Array.new(h, Array.new(w, ' '))
+    Canvas.new(w, h).canvas
   end
 end
