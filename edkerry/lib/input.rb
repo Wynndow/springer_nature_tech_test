@@ -1,3 +1,5 @@
+require 'command'
+
 class Input
 
   def initialize
@@ -10,6 +12,16 @@ class Input
     arr.map do |x|
       x =~ /\d+/ ? x.to_i : x
     end
+  end
+
+  def commandParser(commandElems)
+    if commandElems[0] == 'C'
+      CreateCanvasCommand.new(commandElems[1],commandElems[2])
+    end
+  end
+
+  def showOnScreen
+    commandParser(userCommand).execute.toScreen
   end
 
 end
