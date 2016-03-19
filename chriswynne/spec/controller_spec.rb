@@ -5,7 +5,7 @@ describe Controller do
   let(:ui) { double("ui") }
   let(:controller) {described_class.new(ui)}
 
-  describe '#get_command' do
+  describe '#run' do
 
     it 'can get quit from it\'s loop' do
       allow(ui).to receive(:get_command).and_return("Q")
