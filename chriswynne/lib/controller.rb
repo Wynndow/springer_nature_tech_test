@@ -1,4 +1,4 @@
-require 'canvas.rb'
+require_relative 'canvas.rb'
 
 class Controller
 
