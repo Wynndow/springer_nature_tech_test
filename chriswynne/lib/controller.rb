@@ -10,7 +10,7 @@ class Controller
     quit = false
     until quit
       command = @ui.get_command
-      @ui.output(parse_string command)
+      @ui.output(parse_string(command))
       quit = (command == "Q")
     end
   end
@@ -18,8 +18,8 @@ class Controller
   def parse_string(command)
     command_array = command.split(' ')
     if command_array[0] == "C"
-      command = Canvas.new(command_array[1].to_i, command_array[2].to_i)
-      command.draw
+      canvas = Canvas.new(command_array[1].to_i, command_array[2].to_i)
+      canvas.draw
     end
   end
 end

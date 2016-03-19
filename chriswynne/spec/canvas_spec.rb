@@ -20,10 +20,22 @@ describe Canvas do
 
   describe '#draw' do
 
-    it 'can return the canvas as a string' do
-      new_canvas = canvas.new(1,1)
+    it 'can return the correct width canvas' do
+      new_canvas = canvas.new(4,1)
+      expect(new_canvas.draw).to eq(
+      "------\n" +
+      "|    |\n" +
+      "------\n"
+      )
+    end
+
+    it 'can return the correct height canvas' do
+      new_canvas = canvas.new(1,4)
       expect(new_canvas.draw).to eq(
       "---\n" +
+      "| |\n" +
+      "| |\n" +
+      "| |\n" +
       "| |\n" +
       "---\n"
       )

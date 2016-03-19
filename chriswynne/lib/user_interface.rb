@@ -4,7 +4,5 @@ class UserInterface
     print "enter command: "
     gets.chomp
   end
-
   
-
 end
