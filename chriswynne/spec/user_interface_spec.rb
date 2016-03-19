@@ -12,6 +12,7 @@ describe UserInterface do
     end
 
     it 'takes input from the user' do
+      allow(ui).to receive(:print).and_return(nil)
       allow(ui).to receive(:gets).and_return('C')
       expect(ui.get_command).to eq('C')
     end
