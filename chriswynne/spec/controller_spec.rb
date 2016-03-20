@@ -42,6 +42,10 @@ describe Controller do
       "------\n")
     end
 
+    it 'should output an message if unrecognised command' do
+      expect(controller.parse_string("R")).to eq("Incorrect command, please try again\n")
+    end
+
   end
 
 end

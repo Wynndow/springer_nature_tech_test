@@ -7,11 +7,10 @@ class Controller
   end
 
   def run
-    quit = false
-    until quit
+    command = nil
+    until command == "Q"
       command = @ui.get_command
       @ui.output(parse_string(command))
-      quit = (command == "Q")
     end
   end
 
@@ -20,6 +19,8 @@ class Controller
     if command_array[0] == "C"
       canvas = Canvas.new(command_array[1].to_i, command_array[2].to_i)
       canvas.draw
+    else
+      "Incorrect command, please try again\n"
     end
   end
 end
