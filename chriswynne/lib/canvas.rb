@@ -30,8 +30,9 @@ class Canvas
   end
 
   def vertical_line(x1, y1, x2, y2)
+
     for y_coord in (y1..y2)
-      @canvas[y_coord][x1-1] = 'x'
+      @canvas[height - y_coord][x1-1] = 'x'
     end
   end
 
