@@ -47,8 +47,8 @@ describe Controller do
       expect(controller.parse_string("L 1 3 3 3")).to eq(
       "------\n" +
       "|    |\n" +
-      "|xxx |\n" +
       "|    |\n" +
+      "|xxx |\n" +
       "|    |\n" +
       "------\n"
       )

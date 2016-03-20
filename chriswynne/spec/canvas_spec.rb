@@ -50,8 +50,8 @@ describe Canvas do
       expect(new_canvas.draw).to eq(
       "------\n" +
       "|    |\n" +
-      "|xxx |\n" +
       "|    |\n" +
+      "|xxx |\n" +
       "|    |\n" +
       "------\n"
       )
@@ -62,10 +62,10 @@ describe Canvas do
       new_canvas.add_line(2, 1, 2, 3)
       expect(new_canvas.draw).to eq(
       "------\n" +
+      "| x  |\n" +
+      "| x  |\n" +
+      "| x  |\n" +
       "|    |\n" +
-      "| x  |\n" +
-      "| x  |\n" +
-      "| x  |\n" +
       "------\n"
       )
     end

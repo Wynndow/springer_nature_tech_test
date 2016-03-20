@@ -25,14 +25,14 @@ class Canvas
 
   def horizontal_line(x1, y1, x2, y2)
     for x_coord in (x1..x2)
-      @canvas[height - y1][x_coord-1] = 'x'
+      @canvas[y1 - 1][x_coord-1] = 'x'
     end
   end
 
   def vertical_line(x1, y1, x2, y2)
 
     for y_coord in (y1..y2)
-      @canvas[height - y_coord][x1-1] = 'x'
+      @canvas[y_coord - 1][x1-1] = 'x'
     end
   end
 
