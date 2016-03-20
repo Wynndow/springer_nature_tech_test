@@ -21,6 +21,13 @@ class Canvas
     vertical_line(x1, y1, x2, y2) if x1 == x2
   end
 
+  def add_rectangle(x1, y1, x2, y2)
+    add_line(x1, y1, x2, y1)
+    add_line(x1, y2, x2, y2)
+    add_line(x1, y1, x1, y2)
+    add_line(x2, y1, x2, y2)
+  end
+
   private
 
   def horizontal_line(x1, y1, x2, y2)

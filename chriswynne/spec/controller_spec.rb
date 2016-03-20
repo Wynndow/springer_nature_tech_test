@@ -54,8 +54,20 @@ describe Controller do
       )
     end
 
+    it 'can add a rectangle with R ' do
+      controller.parse_string("C 4 4")
+      expect(controller.parse_string("R 1 2 3 4")).to eq(
+      "------\n" \
+      "|    |\n" \
+      "|xxx |\n" \
+      "|x x |\n" \
+      "|xxx |\n" \
+      "------\n"
+      )
+    end
+
     it 'should output an message if unrecognised command' do
-      expect(controller.parse_string("R")).to eq("Incorrect command, please try again\n")
+      expect(controller.parse_string("Z")).to eq("Incorrect command, please try again\n")
     end
 
   end

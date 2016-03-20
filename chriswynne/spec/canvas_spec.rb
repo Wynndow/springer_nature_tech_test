@@ -43,17 +43,16 @@ describe Canvas do
   end
 
   describe '#add_line' do
-
     it 'can add a horizontal line to the canvas' do
       new_canvas = canvas.new(4, 4)
       new_canvas.add_line(1, 3, 3, 3)
       expect(new_canvas.draw).to eq(
-      "------\n" +
-      "|    |\n" +
-      "|    |\n" +
-      "|xxx |\n" +
-      "|    |\n" +
-      "------\n"
+        "------\n" \
+        "|    |\n" \
+        "|    |\n" \
+        "|xxx |\n" \
+        "|    |\n" \
+        "------\n"
       )
     end
 
@@ -61,14 +60,28 @@ describe Canvas do
       new_canvas = canvas.new(4, 4)
       new_canvas.add_line(2, 1, 2, 3)
       expect(new_canvas.draw).to eq(
-      "------\n" +
-      "| x  |\n" +
-      "| x  |\n" +
-      "| x  |\n" +
-      "|    |\n" +
+        "------\n" \
+        "| x  |\n" \
+        "| x  |\n" \
+        "| x  |\n" \
+        "|    |\n" \
+        "------\n"
+      )
+    end
+  end
+
+  describe '#add_rectangle' do
+    it 'can add a rectangle' do
+      new_canvas = canvas.new(4, 4)
+      new_canvas.add_rectangle(1, 2, 3, 4)
+      expect(new_canvas.draw).to eq(
+      "------\n" \
+      "|    |\n" \
+      "|xxx |\n" \
+      "|x x |\n" \
+      "|xxx |\n" \
       "------\n"
       )
     end
-
   end
 end

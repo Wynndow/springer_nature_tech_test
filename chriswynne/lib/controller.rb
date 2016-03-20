@@ -22,6 +22,8 @@ class Controller
         create_canvas(command_array)
       when "L"
         create_line(command_array)
+      when "R"
+        create_rectangle(command_array)
       else
         "Incorrect command, please try again\n"
     end
@@ -36,6 +38,11 @@ class Controller
 
   def create_line(command_array)
     @canvas.add_line(command_array[1].to_i, command_array[2].to_i, command_array[3].to_i, command_array[4].to_i)
+    @canvas.draw
+  end
+
+  def create_rectangle(command_array)
+    @canvas.add_rectangle(command_array[1].to_i, command_array[2].to_i, command_array[3].to_i, command_array[4].to_i)
     @canvas.draw
   end
 end
