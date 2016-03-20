@@ -17,8 +17,11 @@ class Controller
   def parse_string(command)
     command_array = command.split(' ')
     if command_array[0] == "C"
-      canvas = Canvas.new(command_array[1].to_i, command_array[2].to_i)
-      canvas.draw
+      @canvas = Canvas.new(command_array[1].to_i, command_array[2].to_i)
+      @canvas.draw
+    elsif command_array[0] == "L"
+      @canvas.add_line(command_array[1].to_i, command_array[2].to_i, command_array[3].to_i, command_array[4].to_i)
+      @canvas.draw
     else
       "Incorrect command, please try again\n"
     end

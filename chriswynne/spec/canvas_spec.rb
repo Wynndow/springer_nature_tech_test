@@ -57,7 +57,7 @@ describe Canvas do
       )
     end
 
-    fit 'can add a vertical line to the canvas' do
+    it 'can add a vertical line to the canvas' do
       new_canvas = canvas.new(4, 4)
       new_canvas.add_line(2, 1, 2, 3)
       expect(new_canvas.draw).to eq(

@@ -35,11 +35,23 @@ describe Controller do
   end
 
   describe '#parse_string' do
-    it 'can return the canvas string' do
+    it 'can return the canvas string with C' do
       expect(controller.parse_string("C 4 1")).to eq(
       "------\n"+
       "|    |\n"+
       "------\n")
+    end
+
+    it 'can add a line with L ' do
+      controller.parse_string("C 4 4")
+      expect(controller.parse_string("L 1 3 3 3")).to eq(
+      "------\n" +
+      "|    |\n" +
+      "|xxx |\n" +
+      "|    |\n" +
+      "|    |\n" +
+      "------\n"
+      )
     end
 
     it 'should output an message if unrecognised command' do
